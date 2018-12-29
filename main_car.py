@@ -41,7 +41,8 @@ class Car():
                 tt = float((carex.time_end - carex.time_start) / 3600)
                 print('停车时间%f小时,停车费用%f元.' % (tt, float(tt / 5)))
             else:
-                print('该汽车从未进入， 请联系管理员.')
+                if i == len(self.car_lst) - 1:
+                    print('该汽车从未进入， 请联系管理员.')
 
 #主方法
 while True:
